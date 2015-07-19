@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=		moosefs
-PORTVERSION=		3.0.29
+PORTVERSION=		2.0.72
 CATEGORIES=		sysutils
 MASTER_SITES=		http://ppa.moosefs.com/src/
 PKGNAMESUFFIX?=		-master
@@ -23,8 +23,6 @@ MFS_COMPONENT?=		master
 MFS_USER=		mfs
 MFS_GROUP=		mfs
 MFS_WORKDIR=		/var
-MFS_CGIDIR=		${PREFIX}/share/mfscgi
-MFS_CGISERVDIR=		${PREFIX}/sbin
 
 USERS=			${MFS_USER}
 GROUPS=			${MFS_GROUP}
@@ -32,23 +30,25 @@ GROUPS=			${MFS_GROUP}
 CONFIGURE_ARGS+=	--localstatedir=${MFS_WORKDIR} \
 			--with-default-user=${MFS_USER} \
 			--with-default-group=${MFS_GROUP} \
-			--with-mfscgiserv-dir=${MFS_CGISERVDIR} \
-			--with-mfscgi-dir=${MFS_CGIDIR}
 
 .if ${MFS_COMPONENT} == cgi
+MFS_CGIDIR=		${PREFIX}/share/mfscgi
 USES=			python:2.5+
-CONFIGURE_ARGS+=	--enable-mfscgi
+CONFIGURE_ARGS+=	--enable-mfscgi \
+			--with-mfscgi-dir=${MFS_CGIDIR}
 .else
 CONFIGURE_ARGS+=	--disable-mfscgi
 .endif
 
 .if ${MFS_COMPONENT} == cgiserv
+MFS_CGISERVDIR=		${PREFIX}/sbin
 USES=			python:2.5+
 USE_RC_SUBR=		mfscgiserv
 SUB_FILES+=		pkg-message-cgiserv
 PKGMESSAGE=		${WRKDIR}/pkg-message-cgiserv
 PLIST_SUB+=		MFS_WORKDIR="${MFS_WORKDIR}"
-CONFIGURE_ARGS+=	--enable-mfscgiserv
+CONFIGURE_ARGS+=	--enable-mfscgiserv \
+			--with-mfscgiserv-dir=${MFS_CGISERVDIR}
 RUN_DEPENDS=		moosefs-cgi>0:${PORTSDIR}/sysutils/moosefs-cgi
 .else
 CONFIGURE_ARGS+=	--disable-mfscgiserv
