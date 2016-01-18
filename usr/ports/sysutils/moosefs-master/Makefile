@@ -1,15 +1,15 @@
 # Created by: Jakub Kruszona-Zawadzki <acid@moosefs.com> ; Based on port created by: Chifeng Qu <chifeng@gmail.com>
-# $FreeBSD$
+# $FreeBSD: head/sysutils/moosefs-master/Makefile 406058 2016-01-13 16:36:13Z feld $
 
 PORTNAME=		moosefs
-PORTVERSION=		2.0.72
+PORTVERSION=		2.0.83
 CATEGORIES=		sysutils
 MASTER_SITES=		http://ppa.moosefs.com/src/
 PKGNAMESUFFIX?=		-master
 DISTNAME=		${PORTNAME}-${PORTVERSION}-1
 
 MAINTAINER=		freebsd@moosefs.com
-COMMENT?=		Managing the whole filesystem and storing metadata
+COMMENT?=		Fault-tolerant distributed filesystem
 
 LICENSE=		GPLv2
 

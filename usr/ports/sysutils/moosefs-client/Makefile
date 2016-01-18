@@ -1,9 +1,9 @@
 # Created by: Jakub Kruszona-Zawadzki <acid@moosefs.com> ; Based on port created by: Chifeng Qu <chifeng@gmail.com>
-# $FreeBSD$
+# $FreeBSD: head/sysutils/moosefs-client/Makefile 394023 2015-08-12 16:10:30Z feld $
 
 PKGNAMESUFFIX=	-client
 
-COMMENT=	Moosefs client tools
+COMMENT=	MooseFS client tools
 
 LICENSE=	GPLv2
 
