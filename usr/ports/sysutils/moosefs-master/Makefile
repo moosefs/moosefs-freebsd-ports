@@ -2,7 +2,7 @@
 # $FreeBSD: head/sysutils/moosefs-master/Makefile 406058 2016-01-13 16:36:13Z feld $
 
 PORTNAME=		moosefs
-PORTVERSION=		2.0.84
+PORTVERSION=		2.0.88
 CATEGORIES=		sysutils
 MASTER_SITES=		http://ppa.moosefs.com/src/
 PKGNAMESUFFIX?=		-master
