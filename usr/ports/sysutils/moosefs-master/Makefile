@@ -1,5 +1,5 @@
 # Created by: Jakub Kruszona-Zawadzki <acid@moosefs.com> ; Based on port created by: Chifeng Qu <chifeng@gmail.com>
-# $FreeBSD: head/sysutils/moosefs-master/Makefile 406058 2016-01-13 16:36:13Z feld $
+# $FreeBSD: head/sysutils/moosefs-master/Makefile 412349 2016-04-01 14:25:16Z mat $
 
 PORTNAME=		moosefs
 PORTVERSION=		2.0.89
@@ -49,7 +49,7 @@ PKGMESSAGE=		${WRKDIR}/pkg-message-cgiserv
 PLIST_SUB+=		MFS_WORKDIR="${MFS_WORKDIR}"
 CONFIGURE_ARGS+=	--enable-mfscgiserv \
 			--with-mfscgiserv-dir=${MFS_CGISERVDIR}
-RUN_DEPENDS=		moosefs-cgi>0:${PORTSDIR}/sysutils/moosefs-cgi
+RUN_DEPENDS=		moosefs-cgi>0:sysutils/moosefs-cgi
 .else
 CONFIGURE_ARGS+=	--disable-mfscgiserv
 .endif
