@@ -1,8 +1,8 @@
 # Created by: Jakub Kruszona-Zawadzki <acid@moosefs.com> ; Based on port created by: Chifeng Qu <chifeng@gmail.com>
-# $FreeBSD: head/sysutils/moosefs-master/Makefile 414381 2016-05-01 04:43:22Z pi $
+# $FreeBSD$
 
 PORTNAME=		moosefs
-PORTVERSION=		2.0.89
+PORTVERSION=		3.0.78
 CATEGORIES=		sysutils
 MASTER_SITES=		http://ppa.moosefs.com/src/
 PKGNAMESUFFIX?=		-master
@@ -29,7 +29,7 @@ GROUPS=			${MFS_GROUP}
 
 CONFIGURE_ARGS+=	--localstatedir=${MFS_WORKDIR} \
 			--with-default-user=${MFS_USER} \
-			--with-default-group=${MFS_GROUP} \
+			--with-default-group=${MFS_GROUP}
 
 .if ${MFS_COMPONENT} == cgi
 MFS_CGIDIR=		${PREFIX}/share/mfscgi
