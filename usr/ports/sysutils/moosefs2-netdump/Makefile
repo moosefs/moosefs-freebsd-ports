@@ -1,5 +1,5 @@
 # Created by: Jakub Kruszona-Zawadzki <acid@moosefs.com> ; Based on port created by: Chifeng Qu <chifeng@gmail.com>
-# $FreeBSD: head/sysutils/moosefs-netdump/Makefile 410208 2016-03-05 20:10:34Z feld $
+# $FreeBSD: head/sysutils/moosefs2-netdump/Makefile 418199 2016-07-07 20:58:23Z feld $
 
 PKGNAMESUFFIX=	-netdump
 
@@ -9,6 +9,6 @@ LICENSE=	GPLv2
 
 MFS_COMPONENT=	netdump
 
-MASTERDIR=	${.CURDIR}/../moosefs-master
+MASTERDIR=	${.CURDIR}/../moosefs2-master
 
 .include "${MASTERDIR}/Makefile"
