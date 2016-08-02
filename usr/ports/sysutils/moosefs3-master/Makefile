@@ -1,5 +1,5 @@
 # Created by: Jakub Kruszona-Zawadzki <acid@moosefs.com> ; Based on port created by: Chifeng Qu <chifeng@gmail.com>
-# $FreeBSD$
+# $FreeBSD: head/sysutils/moosefs3-master/Makefile 419134 2016-07-26 16:56:05Z feld $
 
 PORTNAME=		moosefs3
 PORTVERSION=		3.0.80
@@ -30,6 +30,8 @@ GROUPS=			${MFS_GROUP}
 CONFIGURE_ARGS+=	--localstatedir=${MFS_WORKDIR} \
 			--with-default-user=${MFS_USER} \
 			--with-default-group=${MFS_GROUP}
+
+CONFLICTS=	moosefs2-${MFS_COMPONENT}-*
 
 .if ${MFS_COMPONENT} == cgi
 MFS_CGIDIR=		${PREFIX}/share/mfscgi
