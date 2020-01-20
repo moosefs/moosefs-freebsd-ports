@@ -1,9 +1,9 @@
 # Created by: Jakub Kruszona-Zawadzki <acid@moosefs.com> ; Based on port created by: Chifeng Qu <chifeng@gmail.com>
-# $FreeBSD: head/sysutils/moosefs3-master/Makefile 507372 2019-07-26 20:46:53Z gerald $
+# $FreeBSD: head/sysutils/moosefs3-master/Makefile 523354 2020-01-17 19:10:12Z tcberner $
 
 PORTNAME=		moosefs3
-PORTVERSION=		3.0.103
-PORTREVISION=	1
+PORTVERSION=		3.0.109
+PORTREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://ppa.moosefs.com/src/
 PKGNAMESUFFIX?=		-master
