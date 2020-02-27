@@ -1,15 +1,15 @@
 # Created by: Jakub Kruszona-Zawadzki <acid@moosefs.com> ; Based on port created by: Chifeng Qu <chifeng@gmail.com>
-# $FreeBSD: head/sysutils/moosefs3-master/Makefile 523354 2020-01-17 19:10:12Z tcberner $
+# $FreeBSD: head/sysutils/moosefs3-master/Makefile 526885 2020-02-23 07:33:11Z tcberner $
 
 PORTNAME=		moosefs3
-PORTVERSION=		3.0.109
+PORTVERSION=		3.0.111
 PORTREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://ppa.moosefs.com/src/
 PKGNAMESUFFIX?=		-master
-DISTNAME=		moosefs-${PORTVERSION}-1
+DISTNAME=		moosefs-${PORTVERSION}-${PORTREVISION}
 
-MAINTAINER=		freebsd@moosefs.com
+MAINTAINER=		freebsd@moosefs.pro
 COMMENT?=		Fault-tolerant distributed filesystem
 
 LICENSE=		GPLv2
