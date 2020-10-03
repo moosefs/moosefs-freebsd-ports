@@ -1,5 +1,5 @@
 # Created by: Jakub Kruszona-Zawadzki <acid@moosefs.com> ; Based on port created by: Chifeng Qu <chifeng@gmail.com>
-# $FreeBSD: head/sysutils/moosefs3-master/Makefile 535332 2020-05-15 19:58:18Z tcberner $
+# $FreeBSD$
 
 PORTNAME=		moosefs3
 DISTVERSION=		3.0.113

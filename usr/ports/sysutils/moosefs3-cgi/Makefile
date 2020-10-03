@@ -1,5 +1,5 @@
 # Created by: Jakub Kruszona-Zawadzki <acid@moosefs.com> ; Based on port created by: Chifeng Qu <chifeng@gmail.com>
-# $FreeBSD: head/sysutils/moosefs3-cgi/Makefile 419132 2016-07-26 16:50:55Z feld $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-cgi
 
